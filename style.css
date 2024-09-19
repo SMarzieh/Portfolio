@@ -6,8 +6,9 @@ body {
     background-color: #f4f4f4;
 }
 
+/* Header Styles (Light Bluish Background) */
 header {
-    background-color:  #a7c7e7;
+    background-color: #a7c7e7; /* Light bluish color */
     color: white;
     text-align: center;
     padding: 20px 0;
@@ -20,7 +21,7 @@ header h1 {
 header p {
     margin-top: 10px;
     font-size: 1.2em;
-    color: #ccc;
+    color: #f0f0f0; /* Slightly lighter text for contrast */
 }
 
 /* Section for Portfolio */
