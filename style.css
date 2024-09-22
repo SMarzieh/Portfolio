@@ -15,16 +15,20 @@ body {
 }
 
 .header-image {
-    width: 100vw;              /* Full width of the viewport */
-    height: 20px;              /* Set a fixed height for the header */
-    overflow: hidden;          /* Ensure that the overflow is hidden */
+    width: 100vw !important;        /* Ensure the header container is full width */
+    height: 50px !important;        /* Force the header container to a fixed height */
+    overflow: hidden !important;    /* Ensure any overflow is hidden */
+    position: relative;             /* Keep it relative for better control */
 }
 
 .header-image img {
-    width: 100%;               /* Make the image fill the container's width */
-    height: 100%;              /* Ensure the image fills the container's height */
-    object-fit: cover;         /* Scale the image while covering the entire area */
-    display: block;            /* Remove any inline gaps */
+    width: 100% !important;         /* Force the image to fill the full width */
+    height: 100% !important;        /* Force the image to fill the height */
+    object-fit: cover !important;   /* Ensure the image covers the container */
+    display: block !important;      /* Remove any inline gaps */
+    position: absolute;             /* Force the image to stay within the container */
+    top: 0;                         /* Ensure the image starts from the top */
+    left: 0;                        /* Ensure the image starts from the left */
 }
 
 
