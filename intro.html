@@ -1,68 +1,143 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marzie Hosseini - Data Scientist</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* Universal Reset for Consistency */
+* {
+    box-sizing: border-box; /* Include padding and border in width/height calculations */
+    margin: 0;
+    padding: 0;
+}
 
-    <header> <!-- Header section -->
-        <!-- Image at the Top -->
-        <img src="wallpaper.jpeg" alt="Header Design" class="header-image">
-        
-     <!-- Filter Buttons (Updated) -->
-        <div class="filters">
-             <a href="intro.html"><button class="filter-btn">Intro</button></a>
-             <a href="blog.html"><button class="filter-btn">Blog</button></a>
-             <a href="portfolio.html"><button class="filter-btn">Portfolio</button></a>
-             <a href="contact.html"><button class="filter-btn">Contact</button></a>
-        </div>
-        <h1>Welcome to My e-Portfolio</h1>
-        <p>It’s great to have you here!</p>
-        
-    </header>
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif; /* Use a clean, readable font */
+    line-height: 1.6; /* Improve text readability */
+    background-color: #f4f4f4; /* Soft background for contrast */
+    color: #333; /* Default text color */
+    padding: 20px; /* Page padding */
+}
 
+/* Header Styles */
+.header-image {
+    width: 100vw !important; /* Ensure the header container is full width */
+    height: 300px !important; /* Force the header container to a fixed height */
+    overflow: hidden !important; /* Ensure any overflow is hidden */
+    position: relative; /* Keep it relative for better control */
+}
 
-    <!-- Main Section with Text and Image -->
-    <section class="intro">
-        <!-- Text Content -->
-         <div class="intro-text">
-            <h2>Hi, I’m Marzie Hosseini</h2>
-            <p>
-               An ex-astrophysicist turned data scientist. At one point in my previous career, I realized that I want to have a more meaningful and impactful career. I found data science fascinating in terms of the influence and impact it has on our world, from solving complex business problems to helping the healthcare sector reduce mortality through early diagnosis.
-            </p>
-            <p>
-                For example, Google Health's AI for Breast Cancer Screening has demonstrated how machine learning can detect breast cancer earlier than traditional methods, significantly improving survival rates. AI systems like these are transforming how we diagnose and treat diseases, highlighting the immense value of data science in saving lives.
-            </p>
-            <p>
-                That’s why I am passionate about being part of this field. My goal is to use the analytical and research skills I gained in academia to address real-world problems more efficiently and impactfully. I am continually refining my skills, working on projects that challenge me to grow both technically and creatively.
-            </p>
-            <p>
-                Currently, I’m working as a Data Analyst in Berlin while also deepening my expertise in data science through various projects. I’m excited to continue evolving in this field and contribute to making a difference.
-            </p>
-        </div>
+.header-image img {
+    width: 100% !important; /* Force the image to fill the full width */
+    height: 100% !important; /* Force the image to fill the height */
+    object-fit: cover !important; /* Ensure the image covers the container */
+    display: block !important; /* Remove any inline gaps */
+    position: absolute; /* Force the image to stay within the container */
+    top: 0;
+    left: 0;
+}
 
-        
-        <h3>Skills</h3>
-        <ul>
-            <li>Data Analysis</li>
-            <li>Scientific Thinking</li>
-            <li>Machine Learning</li>
-            <li>Data visualization</li>
-            <li>Problem Solving </li>
-          
-        </ul>
-        <div class="image-container">
-    <img src="new_pic.jpg" alt="Your image description" class="profile-image">
-</div>
+/* Filter Buttons Container */
+.filters {
+    display: flex; /* Align buttons in a row */
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 15px; /* Space between buttons */
+    margin: 20px 0; /* Add space between header and text */
+}
 
+/* Button Styles */
+.filter-btn {
+    padding: 12px 24px; /* Adjust padding for better button size */
+    font-size: 16px; /* Maintain text size */
+    cursor: pointer; /* Pointer on hover */
+    background-color: #7EDDE6; /* Button background color */
+    border: none; /* Remove default button border */
+    color: white; /* Button text color */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    text-transform: uppercase; /* Make text uppercase */
+}
+
+/* Button Hover Effect */
+.filter-btn:hover {
+    background-color: #37C6D3; /* Darker background on hover */
+    transform: scale(1.05); /* Slightly grow the button on hover */
+}
+
+/* Two-column layout for intro section */
+.intro-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align the image to the top of the text */
+    margin: 20px 0;
+}
+
+/* Text styling */
+.intro-text {
+    flex: 1; /* Takes the available space */
+    padding-right: 20px; /* Adds space between text and image */
+}
+
+.intro-text h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.intro-text p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Image styling */
+.intro-image img {
+    width: 150px; /* Adjust image size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: round the edges */
+}
+
+/* Skills section */
+.skills-section {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.skills-section h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.skills-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills-section li {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer p {
+    margin: 10px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .intro-section {
+        flex-direction: column; /* Stack text and image vertically on smaller screens */
+        align-items: center; /* Center the content */
+    }
     
-    </section>
-
-    <footer>
-        <p>Made by Marzie.ho94</p>
-    </footer>
-</body>
-</html>
+    .intro-text {
+        padding-right: 0;
+        text-align: center; /* Center text on smaller screens */
+    }
+    
+    .intro-image img {
+        margin-top: 20px;
+    }
+}
