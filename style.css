@@ -15,7 +15,7 @@ body {
 }
 /* Add this section to style your image */
 .profile-image {
-    width: 150px; /* Adjust the width as needed */
+    width: 250px; /* Adjust the width as needed */
     height: auto; /* Keeps the aspect ratio */
     float: right; /* Aligns the image to the right */
     margin: 10px; /* Adds space around the image */
