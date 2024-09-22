@@ -14,6 +14,15 @@ body {
     padding: 20px;                 /* Page padding */
 }
 
+/* Add this section to style your image */
+.profile-image {
+    width: 150px; /* Adjust the width as needed */
+    height: auto; /* Keeps the aspect ratio */
+    float: right; /* Aligns the image to the right */
+    margin: 10px; /* Adds space around the image */
+}
+
+/* Header Styles */
 .header-image {
     width: 100vw !important;        /* Ensure the header container is full width */
     height: 300px !important;        /* Force the header container to a fixed height */
@@ -31,8 +40,6 @@ body {
     left: 0;                        /* Ensure the image starts from the left */
 }
 
-
-
 /* Filter Buttons Container */
 .filters {
     display: flex;                  /* Align buttons in a row */
@@ -41,83 +48,7 @@ body {
     margin: 20px 0;                 /* Add space between header and text */
 }
 
-/* Button Styles */
-.filter-btn {
-    padding: 12px 24px;             /* Adjust padding for better button size */
-    font-size: 16px;                /* Maintain text size */
-    cursor: pointer;                /* Pointer on hover */
-    background-color: #7EDDE6;      /* Button background color */
-    border: none;                   /* Remove default button border */
-    color: white;                   /* Button text color */
-    border-radius: 5px;             /* Rounded corners */
-    transition: background-color 0.3s ease;  /* Smooth hover effect */
-    text-transform: uppercase;      /* Make text uppercase */
-}
-
-/* Button Hover Effect */
-.filter-btn:hover {
-    background-color: #37C6D3;      /* Darker background on hover */
-    transform: scale(1.05);         /* Slightly grow the button on hover */
-}
-
-/* Welcome Text (H1) */
-h1 {
-    text-align: center;             /* Center the text */
-    margin-top: 30px;               /* Add more space above the heading */
-    font-size: 2.5rem;              /* Increase font size for main heading */
-    color: #333;                    /* Set heading color */
-}
-
-/* Paragraph Text */
-p {
-    text-align: center;             /* Center the paragraph */
-    margin-bottom: 30px;            /* Add space below the paragraph */
-    font-size: 1.2rem;              /* Increase font size slightly */
-    color: #666;                    /* Use a lighter color for secondary text */
-}
-
-/* Intro Section */
-.intro {
-    text-align: center;                  /* Center the content */
-    background-color: #f8f9fa;           /* Light background */
-    padding: 40px 20px;                  /* Padding for spacing */
-    margin: 20px 0;                      /* Margin to separate from other sections */
-}
-
-.intro h2 {
-    font-size: 2rem;                     /* Font size for the heading */
-    color: #333;                         /* Dark color for the heading */
-    margin-bottom: 10px;                 /* Space below the heading */
-}
-
-.intro p {
-    font-size: 1.1rem;                   /* Slightly larger font for the paragraph */
-    color: #666;                         /* Lighter color for text */
-    max-width: 800px;                    /* Limit the width of the paragraph */
-    margin: 0 auto;                      /* Center the paragraph */
-}
-
-/* Footer Section */
-.footer {
-    background-color: #333;              /* Dark background color */
-    color: white;                        /* White text */
-    text-align: center;                  /* Center text */
-    padding: 20px;                       /* Padding for spacing */
-}
-
-.footer p {
-    margin: 10px 0;                     /* Margin for footer text */
-}
-
-.footer .social-media a {
-    color: white;                        /* White color for social media links */
-    text-decoration: none;               /* Remove underline */
-    margin: 0 10px;                     /* Space between links */
-}
-
-.footer .social-media a:hover {
-    text-decoration: underline;          /* Underline on hover */
-}
+/* Other existing styles... */
 
 /* Responsive Design */
 @media (max-width: 768px) {
