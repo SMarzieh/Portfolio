@@ -14,13 +14,17 @@ body {
     padding: 20px;                 /* Page padding */
 }
 
-/* Header Image */
-.header-image img {
-    width: 100%;                   /* Full width for the image */
-    height: auto;                  /* Maintain the aspect ratio */
-    display: block;                /* Remove gap below the image */
-    margin: 0 auto;                /* Center the image if needed */
+.header-image {
+    width: 100vw;              /* Full width of the viewport */
+    overflow: hidden;          /* Prevent any overflow */
 }
+
+.header-image img {
+    width: 100vw;              /* Full width of the viewport for the image */
+    height: auto;              /* Maintain aspect ratio */
+    display: block;            /* Remove any gaps below the image */
+}
+
 
 /* Filter Buttons Container */
 .filters {
