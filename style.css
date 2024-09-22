@@ -1,83 +1,133 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
+/* Universal Reset for Consistency */
+* {
+    box-sizing: border-box;      /* Include padding and border in width/height calculations */
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
 }
 
-/* Header Section */
-
-header {
-    text-align: center;
-    padding: 20px;
-    background-color: #fff;
-    margin-bottom: 20px;
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif; /* Use a clean, readable font */
+    line-height: 1.6;              /* Improve text readability */
+    background-color: #f4f4f4;     /* Soft background for contrast */
+    color: #333;                   /* Default text color */
+    padding: 20px;                 /* Page padding */
 }
 
-header img.header-image {
-    width: 100%;            /* Make the image span the full width of the page */
-    height: auto;           /* Maintain the aspect ratio */
-    max-height: 300px;      /* Limit the height to 300px (or adjust as needed) */
-    object-fit: cover;      /* Ensures the image covers the area while keeping proportions */
-    margin-bottom: 20px;    /* Adds space between the image and the text below */
+/* Header Image */
+.header-image img {
+    width: 100%;                   /* Full width for the image */
+    height: auto;                  /* Maintain the aspect ratio */
+    display: block;                /* Remove gap below the image */
+    margin: 0 auto;                /* Center the image if needed */
 }
 
-header h1 {
-    font-size: 2.5em;
-    margin: 10px 0;
+/* Filter Buttons Container */
+.filters {
+    display: flex;                  /* Align buttons in a row */
+    justify-content: center;        /* Center the buttons horizontally */
+    gap: 15px;                      /* Space between buttons */
+    margin: 20px 0;                 /* Add space between header and text */
 }
 
-header p {
-    font-size: 1.2em;
-    color: #666;
+/* Button Styles */
+.filter-btn {
+    padding: 12px 24px;             /* Adjust padding for better button size */
+    font-size: 16px;                /* Maintain text size */
+    cursor: pointer;                /* Pointer on hover */
+    background-color: #007BFF;      /* Button background color */
+    border: none;                   /* Remove default button border */
+    color: white;                   /* Button text color */
+    border-radius: 5px;             /* Rounded corners */
+    transition: background-color 0.3s ease;  /* Smooth hover effect */
+    text-transform: uppercase;      /* Make text uppercase */
 }
 
+/* Button Hover Effect */
+.filter-btn:hover {
+    background-color: #0056b3;      /* Darker background on hover */
+    transform: scale(1.05);         /* Slightly grow the button on hover */
+}
 
-/* Layout for the Introduction Section */
+/* Welcome Text (H1) */
+h1 {
+    text-align: center;             /* Center the text */
+    margin-top: 30px;               /* Add more space above the heading */
+    font-size: 2.5rem;              /* Increase font size for main heading */
+    color: #333;                    /* Set heading color */
+}
+
+/* Paragraph Text */
+p {
+    text-align: center;             /* Center the paragraph */
+    margin-bottom: 30px;            /* Add space below the paragraph */
+    font-size: 1.2rem;              /* Increase font size slightly */
+    color: #666;                    /* Use a lighter color for secondary text */
+}
+
+/* Intro Section */
 .intro {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px;
-    max-width: 1200px;
-    margin: 0 auto;
+    text-align: center;                  /* Center the content */
+    background-color: #f8f9fa;           /* Light background */
+    padding: 40px 20px;                  /* Padding for spacing */
+    margin: 20px 0;                      /* Margin to separate from other sections */
 }
 
-.intro-text {
-    flex: 1;
-    padding-right: 20px;
+.intro h2 {
+    font-size: 2rem;                     /* Font size for the heading */
+    color: #333;                         /* Dark color for the heading */
+    margin-bottom: 10px;                 /* Space below the heading */
 }
 
-.intro-text h2 {
-    font-size: 2em;
-    color: #333;
+.intro p {
+    font-size: 1.1rem;                   /* Slightly larger font for the paragraph */
+    color: #666;                         /* Lighter color for text */
+    max-width: 800px;                    /* Limit the width of the paragraph */
+    margin: 0 auto;                      /* Center the paragraph */
 }
 
-.intro-text p {
-    font-size: 1.1em;
-    color: #555;
-    line-height: 1.6em;
-    margin-top: 20px;
+/* Footer Section */
+.footer {
+    background-color: #333;              /* Dark background color */
+    color: white;                        /* White text */
+    text-align: center;                  /* Center text */
+    padding: 20px;                       /* Padding for spacing */
 }
 
-/* Image Styling */
-.intro-image {
-    flex: 1;
-    text-align: right;
+.footer p {
+    margin: 10px 0;                     /* Margin for footer text */
 }
 
-.intro-image img {
-    max-width: 300px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.footer .social-media a {
+    color: white;                        /* White color for social media links */
+    text-decoration: none;               /* Remove underline */
+    margin: 0 10px;                     /* Space between links */
 }
 
-/* Footer Styles */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
-    margin-top: 50px;
+.footer .social-media a:hover {
+    text-decoration: underline;          /* Underline on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .filter-btn {
+        padding: 10px 15px;         /* Smaller padding for mobile */
+        font-size: 14px;            /* Slightly reduce font size for mobile */
+    }
+
+    h1 {
+        font-size: 2rem;            /* Adjust heading size for mobile */
+    }
+
+    p {
+        font-size: 1rem;            /* Adjust paragraph size for mobile */
+    }
+
+    .intro h2 {
+        font-size: 1.75rem;         /* Adjust heading size on smaller screens */
+    }
+
+    .intro p {
+        font-size: 1rem;            /* Adjust paragraph size for mobile */
+    }
 }
