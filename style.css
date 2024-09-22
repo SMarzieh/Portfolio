@@ -21,8 +21,8 @@ body {
 
 .header-image img {
     width: 100vw;              /* Full width of the viewport for the image */
-    height: auto;              /* Maintain aspect ratio */
-    display: block;            /* Remove any gaps below the image */
+    max-height: 500px;         /* Set a maximum height (you can adjust this value) */
+    object-fit: cover;         /* Ensures the image fills the container while maintaining aspect ratio */
 }
 
 
