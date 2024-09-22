@@ -16,7 +16,7 @@ body {
 
 .header-image {
     width: 100vw !important;        /* Ensure the header container is full width */
-    height: 1000px !important;        /* Force the header container to a fixed height */
+    height: 300px !important;        /* Force the header container to a fixed height */
     overflow: hidden !important;    /* Ensure any overflow is hidden */
     position: relative;             /* Keep it relative for better control */
 }
