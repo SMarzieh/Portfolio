@@ -16,14 +16,17 @@ body {
 
 .header-image {
     width: 100vw;              /* Full width of the viewport */
-    overflow: hidden;          /* Prevent any overflow */
+    height: 20px;              /* Set a fixed height for the header */
+    overflow: hidden;          /* Ensure that the overflow is hidden */
 }
 
 .header-image img {
-    width: 100vw;              /* Full width of the viewport for the image */
-    max-height: 50px;         /* Set a maximum height (you can adjust this value) */
-    object-fit: cover;         /* Ensures the image fills the container while maintaining aspect ratio */
+    width: 100%;               /* Make the image fill the container's width */
+    height: 100%;              /* Ensure the image fills the container's height */
+    object-fit: cover;         /* Scale the image while covering the entire area */
+    display: block;            /* Remove any inline gaps */
 }
+
 
 
 /* Filter Buttons Container */
