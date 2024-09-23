@@ -55,7 +55,7 @@ body {
 
 /* Button Hover Effect */
 .filter-btn:hover {
-    background-color: #37C6D3; /* Darker background on hover */
+    background-color: #0182BB; /* Darker background on hover */
     transform: scale(1.05); /* Slightly grow the button on hover */
 }
 
