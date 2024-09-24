@@ -74,7 +74,7 @@ body {
 }
 
 .intro-image {
-    flex: 1.5; /* Wider column for the image */
+    flex: 2; /* Wider column for the image */
     display: flex;
     justify-content: center;
 }
@@ -92,7 +92,7 @@ body {
 
 /* Image styling */
 .intro-image img {
-    width: 150px; /* Adjust image size */
+    width: 300px; /* Adjust image size */
     height: auto; /* Maintain aspect ratio */
     border-radius: 10px; /* Optional: round the edges */
 }
