@@ -148,3 +148,7 @@ body {
         margin-top: 20px;
     }
 }
+.container {
+    margin-left: 50px; /* Creates space on the left side */
+    padding-left: 20px; /* Optional: adds padding inside the container */
+}
