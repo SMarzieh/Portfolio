@@ -1,154 +1,51 @@
-/* Universal Reset for Consistency */
-* {
-    box-sizing: border-box; /* Include padding and border in width/height calculations */
-    margin: 0;
-    padding: 0;
-}
-
-/* Body Styles */
-body {
-    font-family: Arial, sans-serif; /* Use a clean, readable font */
-    line-height: 1.6; /* Improve text readability */
-    background-color: #f4f4f4; /* Soft background for contrast */
-    color: #333; /* Default text color */
-    padding: 20px; /* Page padding */
-}
-
-/* Header Styles */
-.header-image {
-    width: 100vw !important; /* Ensure the header container is full width */
-    height: 300px !important; /* Force the header container to a fixed height */
-    overflow: hidden !important; /* Ensure any overflow is hidden */
-    position: relative; /* Keep it relative for better control */
-}
-
-.header-image img {
-    width: 100% !important; /* Force the image to fill the full width */
-    height: 100% !important; /* Force the image to fill the height */
-    object-fit: cover !important; /* Ensure the image covers the container */
-    display: block !important; /* Remove any inline gaps */
-    position: absolute; /* Force the image to stay within the container */
-    top: 0;
-    left: 0;
-}
-
-/* Filter Buttons Container */
-.filters {
-    display: flex; /* Align buttons in a row */
-    justify-content: center; /* Center the buttons horizontally */
-    gap: 15px; /* Space between buttons */
-    margin: 20px 0; /* Add space between header and text */
-}
-
-/* Button Styles */
-.filter-btn {
-    padding: 12px 24px; /* Adjust padding for better button size */
-    font-size: 16px; /* Maintain text size */
-    cursor: pointer; /* Pointer on hover */
-    background-color: #0182BB; /* Button background color */
-    border: none; /* Remove default button border */
-    color: white; /* Button text color */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s ease; /* Smooth hover effect */
-    text-transform: uppercase; /* Make text uppercase */
-}
-
-/* Button Hover Effect */
-.filter-btn:hover {
-    background-color: #0182BB; /* Darker background on hover */
-    transform: scale(1.05); /* Slightly grow the button on hover */
-}
-
-/* Two-column layout for intro section */
-.intro-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start; /* Align the image to the top of the text */
-    margin: 20px 0;
-}
-
-/* Text styling */
-.intro-text {
-    flex: 2; /* Takes the available space */
-    padding-right: 20px; /* Adds space between text and image */
-}
-
-.intro-image {
-    flex: 2; /* Wider column for the image */
-    display: flex;
-    justify-content: center;
-}
-
-
-.intro-text h2 {
-    font-size: 2rem;
-    color: #333;
-}
-
-.intro-text p {
-    font-size: 1.1rem;
-    color: #666;
-}
-
-/* Image styling */
-.intro-image img {
-    width: 300px; /* Adjust image size */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Optional: round the edges */
-}
-
-/* Skills section */
-.skills-section {
-    text-align: center;
-    margin-top: 30px;
-}
-
-.skills-section h3 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.skills-section ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.skills-section li {
-    font-size: 1.1rem;
-    color: #666;
-    margin-bottom: 5px;
-}
-
-/* Footer Section */
-.footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
+/* General Container Styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
 }
 
-.footer p {
-    margin: 10px 0;
+/* Flexbox Layout for Main Content (Skills + Intro Side-by-Side) */
+.main-content {
+    display: flex; /* Enables the side-by-side layout */
+    justify-content: space-between; /* Adds space between skills and intro */
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .intro-section {
-        flex-direction: column; /* Stack text and image vertically on smaller screens */
-        align-items: center; /* Center the content */
-    }
-    
-    .intro-text {
-        padding-right: 0;
-        text-align: center; /* Center text on smaller screens */
-    }
-    
-    .intro-image img {
-        margin-top: 20px;
-    }
+/* Skills Section Styling */
+.skills-section {
+    width: 25%; /* Adjust width to control how much space the skills should take */
+    padding-right: 20px; /* Adds space between skills and the intro section */
 }
-.container {
-    margin-left: 50px; /* Creates space on the left side */
-    padding-left: 20px; /* Optional: adds padding inside the container */
+
+.skills-section ul {
+    list-style-type: none; /* Removes bullets */
+    padding: 0;
+}
+
+.skills-section h3 {
+    font-size: 24px; /* Adjust the heading size */
+}
+
+.skills-section ul li {
+    margin-bottom: 10px; /* Adds space between list items */
+}
+
+/* Intro Section Styling */
+.intro-section {
+    width: 70%; /* Adjust the width for the intro text */
+}
+
+.intro-text {
+    margin-bottom: 20px;
+}
+
+.profile-image {
+    max-width: 100%; /* Ensures the image is responsive */
+    height: auto;
+}
+
+/* Basic Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 50px;
 }
