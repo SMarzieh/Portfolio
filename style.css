@@ -1,53 +1,150 @@
-/* Flexbox for main-content */
-.main-content {
-    display: flex;
-    gap: 20px; /* Adds space between sections */
-    align-items: flex-start; /* Align items at the top */
+/* Universal Reset for Consistency */
+* {
+    box-sizing: border-box; /* Include padding and border in width/height calculations */
+    margin: 0;
+    padding: 0;
 }
 
-/* Ensure the image doesn't take too much space */
-.intro-image img {
-    max-width: 250px; /* Adjust this value based on your needs */
-    height: auto;
-    border-radius: 50%; /* Optional, for rounded profile images */
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif; /* Use a clean, readable font */
+    line-height: 1.6; /* Improve text readability */
+    background-color: #f4f4f4; /* Soft background for contrast */
+    color: #333; /* Default text color */
+    padding: 20px; /* Page padding */
 }
 
-/* Make sure the intro-text and skills-section have proper widths */
-.intro-section {
-    flex: 2; /* Makes the intro section larger */
-}
-
-.skills-section {
-    flex: 1; /* Keeps the skills section smaller */
-}
-
-/* Additional styles */
+/* Header Styles */
 .header-image {
-    width: 100%;
-    height: auto;
+    width: 100vw !important; /* Ensure the header container is full width */
+    height: 300px !important; /* Force the header container to a fixed height */
+    overflow: hidden !important; /* Ensure any overflow is hidden */
+    position: relative; /* Keep it relative for better control */
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+.header-image img {
+    width: 100% !important; /* Force the image to fill the full width */
+    height: 100% !important; /* Force the image to fill the height */
+    object-fit: cover !important; /* Ensure the image covers the container */
+    display: block !important; /* Remove any inline gaps */
+    position: absolute; /* Force the image to stay within the container */
+    top: 0;
+    left: 0;
 }
 
-h1, h2, h3 {
-    font-family: Arial, sans-serif;
+/* Filter Buttons Container */
+.filters {
+    display: flex; /* Align buttons in a row */
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 15px; /* Space between buttons */
+    margin: 20px 0; /* Add space between header and text */
 }
 
-p, ul {
-    font-family: 'Verdana', sans-serif;
+/* Button Styles */
+.filter-btn {
+    padding: 12px 24px; /* Adjust padding for better button size */
+    font-size: 16px; /* Maintain text size */
+    cursor: pointer; /* Pointer on hover */
+    background-color: #0182BB; /* Button background color */
+    border: none; /* Remove default button border */
+    color: white; /* Button text color */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    text-transform: uppercase; /* Make text uppercase */
 }
 
-ul {
-    list-style-type: square;
+/* Button Hover Effect */
+.filter-btn:hover {
+    background-color: #0182BB; /* Darker background on hover */
+    transform: scale(1.05); /* Slightly grow the button on hover */
 }
 
-footer {
+/* Two-column layout for intro section */
+.intro-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align the image to the top of the text */
+    margin: 20px 0;
+}
+
+/* Text styling */
+.intro-text {
+    flex: 2; /* Takes the available space */
+    padding-right: 20px; /* Adds space between text and image */
+}
+
+.intro-image {
+    flex: 2; /* Wider column for the image */
+    display: flex;
+    justify-content: center;
+}
+
+
+.intro-text h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.intro-text p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Image styling */
+.intro-image img {
+    width: 300px; /* Adjust image size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: round the edges */
+}
+
+/* Skills section */
+.skills-section {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.skills-section h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.skills-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills-section li {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #333;
+    color: white;
     text-align: center;
     padding: 20px;
-    background-color: #f1f1f1;
-    margin-top: 20px;
+}
+
+.footer p {
+    margin: 10px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .intro-section {
+        flex-direction: column; /* Stack text and image vertically on smaller screens */
+        align-items: center; /* Center the content */
+    }
+    
+    .intro-text {
+        padding-right: 0;
+        text-align: center; /* Center text on smaller screens */
+    }
+    
+    .intro-image img {
+        margin-top: 20px;
+    }
 }
