@@ -148,3 +148,11 @@ body {
         margin-top: 20px;
     }
 }
+
+.container {
+    max-width: 1200px; /* Set a maximum width for the container */
+    margin: 0 auto;    /* Center the container horizontally */
+    text-align: center; /* Center the text inside the container */
+    padding: 20px;     /* Optional padding for spacing */
+}
+
