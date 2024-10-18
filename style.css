@@ -92,7 +92,7 @@ body {
 
 /* Image styling */
 .intro-image img {
-    width: 300px; /* Adjust image size */
+    width: 400px; /* Adjust image size */
     height: auto; /* Maintain aspect ratio */
     border-radius: 10px; /* Optional: round the edges */
 }
