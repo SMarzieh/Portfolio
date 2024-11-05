@@ -157,7 +157,7 @@ body {
 }
 
 .medium-logo {
-    width: 50px; /* Adjust size as needed */
-    height: auto;
+    width: 150px; /* Increase this value to make the image larger */
+    height: auto; /* Keeps the aspect ratio of the image */
     margin-top: 10px;
 }
