@@ -156,3 +156,8 @@ body {
     padding: 20px;     /* Optional padding for spacing */
 }
 
+.medium-logo {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+    margin-top: 10px;
+}
