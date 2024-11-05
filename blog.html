@@ -6,10 +6,33 @@
     <title>Marzie Hosseini - Data Scientist</title>
     <link rel="stylesheet" href="style.css">
 
-    <!-- Inline CSS for Testing Larger Image Size -->
     <style>
+        /* Flex container adjustments */
+        .blog-section {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-top: 20px;
+            max-width: 100%;
+        }
+
+        /* Text column with less space */
+        .explanation {
+            flex: 1;
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+
+        /* Image and link column with more space */
+        .blog-link {
+            flex: 2;
+            text-align: center;
+        }
+
+        /* Image styling to take up full column width */
         .medium-logo {
-            width: 300px; /* Increase this value as needed, e.g., 400px */
+            width: 100%;
+            max-width: 500px; /* Limit maximum size to avoid overflow */
             height: auto;
             margin-top: 10px;
         }
@@ -17,7 +40,6 @@
 </head>
 <body>
 
-    <!-- Header Section -->
     <header>
         <img src="wallpaper.jpeg" alt="Header Design" class="header-image">
         <div class="filters">
@@ -27,21 +49,23 @@
         </div>
     </header>
     
-    <!-- Main Content -->
     <main>
-        <section>
-            <h2>Read My Blog on Medium</h2>
-            <p>Check out my latest articles on Medium:</p>
+        <section class="blog-section">
+            <div class="explanation">
+                <p>Welcome to my writing space on Medium, where I share insights on data science, analytics, and the latest trends in technology. Dive into articles to explore new ideas and learn more about the field!</p>
+            </div>
             
-            <!-- Medium Blog Image and Link -->
-            <a href="https://medium.com/@marziehosseini" target="_blank">
-                <img src="image.png" alt="Medium Logo" class="medium-logo">
-            </a>
-            <a href="https://medium.com/@marziehosseini" target="_blank">Visit my Medium blog</a>
+            <div class="blog-link">
+                <h2>Read My Blog on Medium</h2>
+                <p>Check out my latest articles on Medium:</p>
+                <a href="https://medium.com/@marziehosseini" target="_blank">
+                    <img src="image.png" alt="Medium Logo" class="medium-logo">
+                </a>
+                <a href="https://medium.com/@marziehosseini" target="_blank">Visit my Medium blog</a>
+            </div>
         </section>
     </main>
 
-    <!-- Footer Section -->
     <footer>
         <p>Made by Marzie.ho94</p>
         <p>&copy; 2024 Marzieh Hosseini. All rights reserved.</p>
